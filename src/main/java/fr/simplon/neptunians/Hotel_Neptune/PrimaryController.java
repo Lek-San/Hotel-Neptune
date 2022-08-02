@@ -8,23 +8,51 @@ import java.sql.Statement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class PrimaryController {
 	@FXML
+	private TextField userId;
+	@FXML
+	private TextField userPassword;
+	@FXML
 	private Label testConnect;
-
-	public void connectButton(ActionEvent event) {
+	@FXML
+	private Label findUser;
+	
+	public void findUser(ActionEvent event) {
 		DatabaseConnection connectNow = new DatabaseConnection();
 		Connection connectDB = connectNow.getConnection();
-				
-		String connectQuery = "SELECT nom FROM commune";
+		
+		String connectQuery = "SELECT * FROM administrator";
 		
 		try {
 			Statement statement = connectDB.createStatement();
 			ResultSet queryOutput = statement.executeQuery(connectQuery);
 			
 			while (queryOutput.next()) {
-				testConnect.setText(queryOutput.getString("nom"));
+				if (queryOutput.getString("email") == "bouboule@simplon.fr") {
+					System.out.println("youpi");
+					System.out.println(queryOutput.getString("email"));
+				};
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void connectButton(ActionEvent event) {
+		DatabaseConnection connectNow = new DatabaseConnection();
+		Connection connectDB = connectNow.getConnection();
+				
+		String connectQuery = "SELECT email FROM administrator";
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			ResultSet queryOutput = statement.executeQuery(connectQuery);
+			
+			while (queryOutput.next()) {
+				testConnect.setText(queryOutput.getString("email"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

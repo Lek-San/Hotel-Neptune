@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.simplon.neptunians.Hotel_Neptune.PrimaryController">
+	<!-- TODO Add Nodes -->
+	<Label fx:id="testConnect" text="Ici c'est le login" />
+</AnchorPane>
+
