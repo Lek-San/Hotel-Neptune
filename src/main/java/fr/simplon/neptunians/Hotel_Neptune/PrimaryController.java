@@ -25,7 +25,11 @@ public class PrimaryController {
 	private Label goToSignupPage;
 	@FXML
 	private Label goToBackofficePage;
-	
+
+	public void demonstrationBouton(ActionEvent event) {
+		System.out.println("hello");
+		
+	}
 	
 	public void goToLoginPage(ActionEvent event) throws IOException {
 		App.setRoot("login");
@@ -38,25 +42,25 @@ public class PrimaryController {
 	}
 	
 	public void findUser(ActionEvent event) throws IOException {
-//		DatabaseConnection connectNow = new DatabaseConnection();
-//		Connection connectDB = connectNow.getConnection();
-//		
-//		String connectQuery = "SELECT * FROM administrator";
-//		
-//		try {
-//			Statement statement = connectDB.createStatement();
-//			ResultSet queryOutput = statement.executeQuery(connectQuery);
-//			
-//			while (queryOutput.next()) {
-//				if (queryOutput.getString("email") == "bouboule@simplon.fr") {
-//					System.out.println("youpi");
-//					System.out.println(queryOutput.getString("email"));
-//				};
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-		App.setRoot("login");
+		DatabaseConnection connectNow = new DatabaseConnection();
+		Connection connectDB = connectNow.getConnection();
+		
+		String connectQuery = "SELECT email FROM administrator";
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			ResultSet queryOutput = statement.executeQuery(connectQuery);
+			
+			while (queryOutput.next()) {
+				if (queryOutput.getString("email") == "bouboule@simplon.fr") {
+					System.out.println("youpi");
+					System.out.println(queryOutput.getString("email"));
+				};
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void connectButton(ActionEvent event) {

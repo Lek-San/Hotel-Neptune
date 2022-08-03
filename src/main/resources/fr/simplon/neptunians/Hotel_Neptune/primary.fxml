@@ -22,6 +22,7 @@
 		<Button fx:id="loginButton" onAction="#goToLoginPage" text="Page Login" />
 		<Button fx:id="signupButton" onAction="#goToSignupPage" text="Page Signup" />
 		<Button fx:id="backofficeButton" onAction="#goToBackofficePage" text="Page Backoffice" />
+		<Button onAction="#demonstrationBouton" text="Page Backoffice" />
 		
 	</children>
 	<padding>
