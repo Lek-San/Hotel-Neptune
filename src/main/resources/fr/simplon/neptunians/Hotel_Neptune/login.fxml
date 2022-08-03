@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="744.0" style="-fx-background-color: #529FB7;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="fieldLoginLogin" layoutX="372.0" layoutY="104.0" prefHeight="46.0" prefWidth="343.0" promptText="login">
+      <TextField fx:id="fieldLoginLogin" layoutX="372.0" layoutY="101.0" prefHeight="46.0" prefWidth="343.0" promptText="login">
          <font>
             <Font size="20.0" />
          </font>
@@ -88,7 +88,7 @@
             </DropShadow>
          </effect>
       </Text>
-      <Button fx:id="btnSignupLogin" layoutX="620.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #87A0AB;" text="Sign up" textFill="WHITE">
+      <Button fx:id="btnSignupLogin" layoutX="619.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #87A0AB;" text="Sign up" textFill="WHITE">
          <effect>
             <DropShadow>
                <color>
@@ -97,7 +97,7 @@
             </DropShadow>
          </effect>
       </Button>
-      <PasswordField layoutX="374.0" layoutY="188.0" prefHeight="46.0" prefWidth="343.0" promptText="password">
+      <PasswordField fx:id="fieldPassLogin" layoutX="374.0" layoutY="188.0" prefHeight="46.0" prefWidth="343.0" promptText="password">
          <font>
             <Font size="20.0" />
          </font>
