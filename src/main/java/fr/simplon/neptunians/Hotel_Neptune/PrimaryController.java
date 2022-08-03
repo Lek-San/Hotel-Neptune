@@ -19,12 +19,33 @@ public class PrimaryController {
 	private Label testConnect;
 	@FXML
 	private Label findUser;
+	@FXML
+	private Label goToLoginPage;
+	@FXML
+	private Label goToSignupPage;
+	@FXML
+	private Label goToBackofficePage;
+
+	public void demonstrationBouton(ActionEvent event) {
+		System.out.println("hello");
+		
+	}
 	
-	public void findUser(ActionEvent event) {
+	public void goToLoginPage(ActionEvent event) throws IOException {
+		App.setRoot("login");
+	}
+	public void goToSignupPage(ActionEvent event) throws IOException {
+		App.setRoot("signup");
+	}
+	public void goToBackofficePage(ActionEvent event) throws IOException {
+		App.setRoot("backoffice");
+	}
+	
+	public void findUser(ActionEvent event) throws IOException {
 		DatabaseConnection connectNow = new DatabaseConnection();
 		Connection connectDB = connectNow.getConnection();
 		
-		String connectQuery = "SELECT * FROM administrator";
+		String connectQuery = "SELECT email FROM administrator";
 		
 		try {
 			Statement statement = connectDB.createStatement();
@@ -39,6 +60,7 @@ public class PrimaryController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public void connectButton(ActionEvent event) {
