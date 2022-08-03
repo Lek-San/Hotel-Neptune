@@ -1,5 +1,7 @@
 package fr.simplon.neptunians.Hotel_Neptune;
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -25,7 +27,13 @@ public class SignupController extends BackToController {
 	private TextField fieldcomfPass;
 	@FXML
 	private Button btnSubmitCreateAccount;
+	@FXML
+	private Button btnReturnMainPage;
 	
+	@FXML
+    private void btnReturnMainPage() throws IOException {
+        App.setRoot("primary");
+    }
 	
 	
 	
