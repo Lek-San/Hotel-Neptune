@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="545.0" style="-fx-background-color: #529FB7;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.simplon.neptunians.Hotel_Neptune.SignupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="545.0" style="-fx-background-color: #529FB7;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.simplon.neptunians.Hotel_Neptune.SignupController">
 	<children>
 		<TextField fx:id="fieldFirstName" layoutX="71.0" layoutY="115.0" prefHeight="26.0" prefWidth="404.0" promptText="First-Name">
 			<font>
@@ -49,7 +49,7 @@
 				<Font size="14.0" />
 			</font>
 		</PasswordField>
-		<Button fx:id="btnSubmitCreatAccount" layoutX="308.0" layoutY="608.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: #898F94;" text="Submit" textFill="WHITE">
+		<Button fx:id="btnSubmitCreateAccount" layoutX="184.0" layoutY="582.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="178.0" style="-fx-background-color: #898F94;" text="Submit" textFill="WHITE">
 			<font>
 				<Font name="System Bold" size="18.0" />
 			</font>
@@ -64,5 +64,7 @@
 				<Font size="20.0" />
 			</font>
 		</Text>
+      <Text fill="RED" layoutX="164.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if you do not want to create an email" />
+      <Button fx:id="btnReturnMainPage" layoutX="203.0" layoutY="689.0" mnemonicParsing="false" onAction="#btnReturnMainPage" style="-fx-background-color: red;" text="Return on main page" />
 	</children>
 </AnchorPane>
