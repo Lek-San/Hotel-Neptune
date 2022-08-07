@@ -11,7 +11,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -73,7 +72,7 @@ public class BackofficeController extends BackToController {
 				// TODO Auto-generated method stub
 				TableCell<Type, Void> cell = new TableCell<Type, Void>() {
 					// Création du bouton
-					private final Button btn = new Button("Bouton");
+					private final Button btn = new Button("Edit");
 					{
 						// Définition de l'événement lié au bouton créé
 						btn.setOnAction((ActionEvent event) -> {
