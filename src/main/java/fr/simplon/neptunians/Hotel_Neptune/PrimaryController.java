@@ -26,8 +26,8 @@ public class PrimaryController {
 	@FXML
 	private Label goToBackofficePage;
 
-	public void demonstrationBouton(ActionEvent event) {
-		System.out.println("hello");
+	public void demonstrationBouton(ActionEvent event) throws IOException {
+		App.setRoot("reservation");
 		
 	}
 	
